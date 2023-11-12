@@ -13,8 +13,10 @@ def weather():
 
         user_input = request.form['city']
         weather_data = requests.get(f"https://api.openweathermap.org/data/2.5/weather?q={user_input}&units=imperial&APPID=8987e057165d2a4223dd4d8308a2ddb1")
-
-        return render_template('weather_displayed.html', values=weather_data.json())
+        if weather_data.json() ['cod'] == '404':
+            return render_template('weather_displayed.html', values="No City Found")
+        else:
+            return render_template('weather_displayed.html', values=weather_data.json())
     else:
         return render_template('weather.html')
 
