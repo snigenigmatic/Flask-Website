@@ -1,13 +1,13 @@
 from flask import Flask, render_template, url_for, request
 import requests
 
-app = Flask(__name__)
+index = Flask(__name__)
 
-@app.route('/', methods=['GET','POST'])
+@index.route('/', methods=['GET','POST'])
 def home():
     return render_template("index.html")
 
-@app.route('/weather', methods=['GET','POST'])
+@index.route('/weather', methods=['GET','POST'])
 def weather():
     if request.method == 'POST':
 
@@ -20,17 +20,17 @@ def weather():
     else:
         return render_template('weather.html')
 
-@app.route('/health', methods=['GET','POST'])
+@index.route('/health', methods=['GET','POST'])
 def health():
     return render_template('health.html')
 
-@app.route('/consultation', methods=['GET','POST'])
+@index.route('/consultation', methods=['GET','POST'])
 def consultation():
     return render_template('consultation.html')
 
-@app.route('/blog', methods=['GET','POST'])
+@index.route('/blog', methods=['GET','POST'])
 def blog():
     return render_template('blog.html')
 
 if __name__ == "__main__":
-    app.run(debug=True, port=8000)
+    index.run(debug=True, port=8000)
