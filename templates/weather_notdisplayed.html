@@ -7,12 +7,13 @@
 
 
 {% block body %}
+
 <section class="unmain">
     <h1>Weather</h1>
     <p>Weather data in an elegant way.</p>
       <div class="unmain-container">
       </div>
-  </section>
+</section>
 
   <hr class="footerhr">
 
@@ -25,6 +26,9 @@
     </div>
     </div>
 
-  <p> {{ values }} </p>
+<div class="citynotfound">
+  <h1>City Not Found</h1>
+  <p>Oops! Could not find a city with that name.</p>
+</div>
 
 {% endblock%}
