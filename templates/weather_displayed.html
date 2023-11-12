@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+
+{% block head %}
+
+{% endblock%}
+
+
+{% block body %}
+<section class="unmain">
+    <h1>Weather</h1>
+    <p>Weather data in an elegant way.</p>
+      <div class="unmain-container">
+      </div>
+  </section>
+
+  <hr class="footerhr">
+
+
+  <div class="city-input">
+    <div class="input-field">
+      <form action="#" method="POST" >
+        <input type="'text" required spellcheck="'True" id="city" name="city">
+        <label for="city">Enter a City </label>
+      </form>
+    </div>
+    </div>
+
+    
+
+  <p> {{ values }} </p>
+
+
+
+
+
+{% endblock%}
