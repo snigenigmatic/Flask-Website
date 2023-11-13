@@ -1,0 +1,12 @@
+{
+    "version": 2,
+    "rewrites": [
+      { "source": "/(.*)", "destination": "/" }
+    ],
+    "builds": [
+      { "src": "indxe.py", "use": "@vercel/python" }
+    ],
+    "routes": [
+      { "src": "/(.*)", "dest": "/index.py" }
+    ]
+  }
