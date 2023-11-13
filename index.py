@@ -33,4 +33,4 @@ def blog():
     return render_template('blog.html')
 
 if __name__ == "__main__":
-    index.run(debug=True, port=8000)
+    index.run(debug=False, port='0.0.0.0')
